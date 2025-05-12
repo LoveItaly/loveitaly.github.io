@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoveItaly</title>
+    <meta name="description" content="Discover the beauty of Italy with LoveItaly. Your guide to Italian destinations, culture, and travel tips." />
+    <meta name="keywords" content="Italy, travel, tourism, destinations, culture, food, vacation, holidays" />
+    <link rel="canonical" href="https://loveitaly.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .nav-link {
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #b71c1c;
+        }
+        .btn-primary {
+            background-color: #b71c1c;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #8e0000;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        }
+        #language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 100; /* Ensure the switcher is above other elements */
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <header class="bg-white fixed w-full z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center text-3xl font-bold text-red-800">
+                <span class="mr-2">🇮🇹</span> LoveItaly
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#destinations" class="nav-link font-medium">Destinations</a>
+                <a href="#experiences" class="nav-link font-medium">Experiences</a>
+                <a href="#food-wine" class="nav-link font-medium">Food & Wine</a>
+                <a href="#about" class="nav-link font-medium">About</a>
+            </nav>
+            <button class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="language-switcher">
+        <select id="language" onchange="changeLanguage()" class="border rounded-md py-1 px-2 text-gray-700 focus:outline-none focus:ring-red-500 focus:border-red-500 bg-white">
+            <option value="en" selected>English</option>
+            <option value="it">Italiano</option>
+        </select>
+    </div>
+
+    <main class="pt-28">
+        <section class="relative h-screen flex flex-col justify-center items-center text-center text-white bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1526481280690-7492f1e9c87e?auto=format&fit=crop&w=1950&q=80');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 px-4">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Discover Italy with <em>LoveItaly</em></h1>
+                <p class="text-xl md:text-2xl mb-8">Your guide to destinations, culture, and culinary delights.</p>
+                <a href="#destinations" class="btn-primary inline-block">Explore Destinations</a>
+            </div>
+        </section>
+
+        <section id="destinations" class="py-20 bg-white">
+            <h2 class="text-4xl font-bold text-center text-red-700 mb-12">Popular Destinations</h2>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
+                <div class="card">
+                    <img src="https://images.ctfassets.net/lmkdg513arga/3Vhm0NRK3OMQIuSo9EDjnp/71b0844f15fbf5e0bff2751f45f6180e/iStock-539115110.jpg?w=2764&fm=jpg" alt="Rome" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Rome</h3>
+                        <p class="text-gray-700 mb-4">Explore ruins, art, and the heartbeat of Italian history.</p>
+                        <a href="https://www.turismoroma.it/en" class="text-red-700 font-semibold hover:underline" target="_blank">Discover Rome</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcT3-u91sEnijlnyVREv1YO4MHtAB0SyxDl6PFJd7s1D6kJX1GXD_anVc37pfuUk3DRFcYuhn8bS7YexdpCzJ6G3wYVFM3ysl-OsWPC_ag" alt="Florence" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Florence</h3>
+                        <p class="text-gray-700 mb-4">The cradle of the Renaissance, filled with art and architecture.</p>
+                        <a href="https://www.feelflorence.it/en" class="text-red-700 font-semibold hover:underline" target="_blank">Discover Florence</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTDNFZiD_QQ0hBMSD7kbhP40sW5cwtsJOaB2P6TAIly02ZTa3Zxil-ndQPheVikbSIhrXQKA1_LAOh-RTUCJ8_2SeNf7nClOnqIkJEi-6s" alt="Venice" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Venice</h3>
+                        <p class="text-gray-700 mb-4">A romantic maze of canals, bridges, and timeless charm.</p>
+                        <a href="https://www.veneziaunica.it/en" class="text-red-700 font-semibold hover:underline" target="_blank">Discover Venice</a>
+                    </div>
+                </div>
+                <div class="card"> 
+                  <img src="https://lp-cms-production.imgix.net/2025-01/Shutterstock2145006939.jpg" alt="Amalfi Coast" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Amalfi Coast</h3>
+                        <p class="text-gray-700 mb-4">Breathtaking cliffs, turquoise seas, and colorful towns.</p>
+                        <a href="https://www.amalfitouristoffice.it/" class="text-red-700 font-semibold hover:underline" target="_blank">Discover Amalfi</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://assets.bucketlistly.blog/sites/5adf778b6eabcc00190b75b1/content_entry5b155bed5711a8176e9f9783/63bbc08ba21694000472bd5d/files/milan-italy-travel-photo-20230108112136096-main-image.jpg" alt="Milan" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Milan</h3>
+                        <p class="text-gray-700 mb-4">Italy's fashion capital with a vibrant modern culture.</p>
+                        <a href="https://www.yesmilano.it/en" class="text-red-700 font-semibold hover:underline" target="_blank">Discover Milan</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1571847143013-2fffb3edc6de?auto=format&fit=crop&w=1470&q=80" alt="Cinque Terre" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Cinque Terre</h3>
+                        <p class="text-gray-700 mb-4">Five colorful villages perched along the Ligurian coast.</p>
+                        <a href="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRhwsVmJTe8tY-W9l0QIylhnm6Tgu7Cr6OsfuCvh3HmzhPhy4Js0UU0bhx8rDosIq1Qsyj-qcIr_7I_N-nLVk3i5rpa9t1fY4r82DAjvA" class="text-red-700 font-semibold hover:underline" target="_blank">Discover Cinque Terre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-100">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-red-700 mb-6">About LoveItaly</h2>
+                <p class="text-gray-700 text-lg leading-relaxed">LoveItaly is your ultimate guide to exploring Italy's rich culture, stunning landscapes, and delicious cuisine. Whether you're planning a romantic getaway, a cultural tour, or a culinary journey, we help you discover the true essence of Italy.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-6 text-center">
+        <p>&copy; No rights are reserved. Credits to owners for original images. Not affilated with Italy.</p>
+    </footer>
+
+    <script>
+        function changeLanguage() {
+            const selectedLanguage = document.getElementById("language").value;
+            if (selectedLanguage === "it") {
+                window.location.href = "/it/index.html";
+            }
+        }
+    </script>
+</body>
+</html>
